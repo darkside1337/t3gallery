@@ -1,3 +1,4 @@
+import { headers } from "next/headers";
 import { db } from "~/server/db";
 
 const mockUrls = [
@@ -6,6 +7,8 @@ const mockUrls = [
   "https://utfs.io/f/d7fa2c91-b1b9-4159-9a34-4fc7232b7326-j3g8bl.svg",
   "https://utfs.io/f/8326b611-8bba-4bd9-a4fd-443da1ce8f30-l7xosj.svg",
 ];
+
+export const dynamic = "force-dynamic";
 
 const mockImages = mockUrls.map((url, index) => ({
   id: index + 1,
